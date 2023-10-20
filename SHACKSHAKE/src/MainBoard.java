@@ -17,13 +17,17 @@ public class MainBoard {
 
     public void printMenu() {
         int index = 1;
-        System.out.println("SHAKESHACK BURGER 에 오신 걸 환엽합니다.");
+        System.out.println("SHAKESHACK BURGER 에 오신걸 환엽합니다.");
         System.out.println("아래 메뉴판을 보시고 메뉴를 골라 입력해주세요.");
         System.out.println("[ SHAKESHACK MENU ]");
         for (Menu m : menuList) {
             System.out.printf("%d. %-20s | %-30s\n", index, m.name, m.detail);
             index++;
         }
+        System.out.println();
+        System.out.println("[ ORDER MENU ]");
+        System.out.printf("%d. %-10s | 장바구니를 확인 후 주문합니다.\n", index, "Order");
+        System.out.printf("%d. %-10s | 진행중인 주문을 취소합니다.\n", ++index, "Cancel");
     }
 
     public void printProducts(int n) {

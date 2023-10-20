@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6482485a-e771-4c33-829c-0dbc12e786ce" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SHACKSHAKE/SHACKSHAKE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SHACKSHAKE/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SHACKSHAKE/src/MainBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SHACKSHAKE/src/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SHACKSHAKE/src/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SHACKSHAKE/src/Products.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Java_HW_Week1/Java_HW_Week1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java_HW_Week1/Java_HW_Week1.iml" afterDir="false" />
-    </list>
+    <list default="true" id="6482485a-e771-4c33-829c-0dbc12e786ce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +73,7 @@
       <workItem from="1697767200505" duration="11696000" />
       <workItem from="1697788947203" duration="11544000" />
       <workItem from="1697811518634" duration="471000" />
+      <workItem from="1697813410427" duration="1672000" />
     </task>
     <servers />
   </component>

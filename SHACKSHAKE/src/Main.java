@@ -20,9 +20,15 @@ public class Main {
         while (true) {
             mainBoard.printMenu();
             int n = sc.nextInt();
-            if(n==5){
+            if (n == 5) {
                 order();
-            }else{
+            } else if (n == 6) {
+                order.printCancel();
+                int c = sc.nextInt();
+                if (c == 1) {
+                    order.cancel();
+                }
+            } else {
                 selectMenu(n);
             }
         }
@@ -31,17 +37,17 @@ public class Main {
     private void selectMenu(int n) {
         mainBoard.printProducts(n);
         int dn = sc.nextInt();
-        order.confirmOrder(mainBoard.menuList.get(n -1).productsList.get(dn-1));
+        order.confirmOrder(mainBoard.menuList.get(n - 1).productsList.get(dn - 1));
         int c = sc.nextInt();
-        if(c == 1){
-            order.addOrder(mainBoard.menuList.get(n -1).productsList.get(dn-1));
+        if (c == 1) {
+            order.addOrder(mainBoard.menuList.get(n - 1).productsList.get(dn - 1));
         }
     }
 
     private void order() {
         order.printOrder();
         int o = sc.nextInt();
-        if(o == 1){
+        if (o == 1) {
             order.orderFinish();
         }
     }

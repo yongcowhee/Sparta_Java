@@ -33,6 +33,8 @@ public class Order {
 
     public void orderFinish(){
         waiting += 1;
+        orderList.clear();
+        totalPrice = 0;
         System.out.println("주문이 완료되었습니다!");
         System.out.println();
         System.out.printf("대기번호는 [ %d ] 번 입니다.\n", waiting);
@@ -43,5 +45,16 @@ public class Order {
         } catch (InterruptedException e){
             e.printStackTrace();
         }
+    }
+
+    public void printCancel(){
+        System.out.println("진행하던 주문을 취소하시겠습니까?");
+        System.out.println("1. 확인       2. 취소");
+    }
+
+    public void cancel(){
+        orderList.clear();
+        totalPrice = 0;
+        System.out.println("진행하던 주문이 취소되었습니다.\n");
     }
 }
