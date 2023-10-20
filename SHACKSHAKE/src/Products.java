@@ -4,7 +4,7 @@ import java.util.List;
 
 public class Products extends Menu {
     final double price;
-
+    Order order = new Order();
     public Products(String name, String detail, double price) {
         super(name, detail);
         this.price = price;

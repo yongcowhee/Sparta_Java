@@ -1,13 +1,28 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
 public class Order {
     double totalPrice;
+    double totalSellPrice;
     int waiting;
     List<Products> orderList = new ArrayList<>();
+    List<Products> totalOrderList = new ArrayList<>();
+    Map<String, Integer> countMenuList = new HashMap<>();
 
     public void addOrder(Products products) {
-        this.orderList.add(products);
+        int count = 0;
+        // 장바구니에 이미 존재하는 경우
+        if(orderList.contains(products)){
+            this.countMenuList.put(products.name, count++);
+            this.totalOrderList.add(products);
+        }else{
+            this.orderList.add(products);
+            this.totalOrderList.add(products);
+        }
         this.totalPrice += products.price;
+        this.totalSellPrice += products.price;
         System.out.println(products.name + " 가 장바구니에 추가되었습니다.\n");
     }
 
@@ -56,5 +71,18 @@ public class Order {
         orderList.clear();
         totalPrice = 0;
         System.out.println("진행하던 주문이 취소되었습니다.\n");
+    }
+
+    public void printTotal(){
+        System.out.println("[ 총 판매금액 현황 ]");
+        System.out.printf("현재까지 총 판매된 금액은 [ W %.2f ] 입니다.\n", this.totalSellPrice);
+        System.out.println();
+        System.out.println("[ 총 판매상품 목록 현황 ]");
+        System.out.println("현재까지 총 판매된 상품 목록은 아래와 같습니다.");
+        System.out.println();
+        for (Products p : this.totalOrderList) {
+            System.out.printf("- %-25s | W %.2f\n", p.name, p.price);
+        }
+        System.out.println();
     }
 }

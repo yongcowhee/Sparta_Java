@@ -28,6 +28,8 @@ public class Main {
                 if (c == 1) {
                     order.cancel();
                 }
+            } else if (n == 0) {
+                order.printTotal();
             } else {
                 selectMenu(n);
             }
@@ -36,6 +38,7 @@ public class Main {
 
     private void selectMenu(int n) {
         mainBoard.printProducts(n);
+        Integer count;
         int dn = sc.nextInt();
         order.confirmOrder(mainBoard.menuList.get(n - 1).productsList.get(dn - 1));
         int c = sc.nextInt();
