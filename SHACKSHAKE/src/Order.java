@@ -12,14 +12,15 @@ public class Order {
     Map<String, Integer> countMenuList = new HashMap<>();
 
     public void addOrder(Products products) {
-        int count = 0;
         // 장바구니에 이미 존재하는 경우
         if(orderList.contains(products)){
-            this.countMenuList.put(products.name, count++);
+            int count = this.countMenuList.getOrDefault(products.name,0 );
+            this.countMenuList.put(products.name, ++count);
             this.totalOrderList.add(products);
         }else{
             this.orderList.add(products);
             this.totalOrderList.add(products);
+            this.countMenuList.put(products.name,1);
         }
         this.totalPrice += products.price;
         this.totalSellPrice += products.price;
@@ -36,7 +37,8 @@ public class Order {
         System.out.println("아래와 같이 주문 하시겠습니까?\n");
         System.out.printf("[ %s ]\n", "Orders");
         for (Products p : orderList) {
-            System.out.println(p.toString());
+            Integer count = this.countMenuList.get(p.name);
+            System.out.println(p.printProducts(count));
         }
         System.out.println();
         System.out.printf("[ %s ]\n", "Total");

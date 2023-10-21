@@ -4,10 +4,13 @@ import java.util.List;
 
 public class Products extends Menu {
     final double price;
-    Order order = new Order();
     public Products(String name, String detail, double price) {
         super(name, detail);
         this.price = price;
+    }
+
+    public String printProducts(int count){
+        return String.format("%-24s | W %-5.1f | %d개 | %s", this.name, this.price, count, this.detail);
     }
 
     @Override
